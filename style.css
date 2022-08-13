@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#222;
+    color:#fff;
+    font-family: system-ui;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    /* مكان الخط*/
+    text-align: center;
+    /*حجم الخط*/
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: #111;
+    margin: 4px 0;
+    border-radius: 4px;
+    padding: 4px;
+    /*بعطي لون للخط*/
+    color: #fff;
+
+}
+/*بتغير على صغات المربع لما ناشر ماوس عليه */
+input:focus{
+    /*لون الجديد الذي يظهر على مربع اذا اشرت عليه بالماوس*/
+background:#000 ;
+/* بخلي مربع يكبر قليلن لما ماوس تاشر عليه */
+transform: scale(1.1);
+}
+/*خلت المربعات جنب */
+.price input{
+    width: 20%;
+}
+
+#total{
+
+    background: red;
+    padding:5px 2px;
+    border-radius: 4px;
+}
+/* غير على اسم مربع يلي لونه احمر  */
+#total::before{
+    content:'Total :' ;
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    /* بغير شكل ماوس لما يخليها على كبسه*/
+    cursor: pointer;
+    background: rgb(3, 12, 61);
+    color: #fff;
+    /* عمل انحناء للكبسه البطن*/
+    border-radius: 20px;
+    /* مقدار الوقت لظهور التائثيرات */
+    transition: 0.05s;
+
+}
+/*التغيرات التي ستكون على البطن لما ناشر الماوس عليها */
+button:hover{
+background:rgb(37, 76, 204) ;
+/* بخلي تباعد بين الاحرف لما تمةن الماوس على كبسه*/
+letter-spacing:1px ;
+}
+ .btnSearch{
+    display: flex;
+    justify-content: space-between;
+ }
+ .btnSearch button{
+    width: 45% 0;
+ }
+ #deleteAll{
+    margin: 20px 0;
+
+ }
+ table button:hover{
+    transform: scale(1.1);
+ }
+ table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+ }
+ /*نغير على صفات الخط الاول في الجدول*/
+ table th{
+    /*خلا كل الحروف كبيره*/
+    text-transform: uppercase;
+ }
+ th,td{
+    /*مسافه حول المربع*/
+    padding:5px;
+ }
+
+
+

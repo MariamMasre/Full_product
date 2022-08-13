@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!--قسم الهيد الى ثلاث اقسام مشان نتحكم فيها -->
+<body>
+  <div class="crud">
+    <!--راح يكتب فيها عنوان وشرح -->
+    <div class="head">
+        <h2>crud</h2>
+        <p>product managenent</p>
+
+    </div>
+<!--هون عمل جزء يليي بخص الفورم من  وضع مربعات وفراغات -->
+    <div class="inputs">
+        <input placeholder="title" type="text" id="title">
+        <div class="price">
+            <!-- عند كل مربع مشان بس يكتب داخل المربع ينادي الفونكشنgetTotal() هون نادينا الفونكش-->
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total">1234</small>
+        </div> 
+        <input placeholder="count" type="number" id="count">
+        <input placeholder="category" type="text" id="category">
+        <button id="submit">Create</button>
+    </div>
+
+    <div class="outputs">
+        <div class="searchBlock">
+            <input  onkeyup ="searchData(this.value)" type="text" id="search" placeholder="Search">
+            <div class="btnSearch">
+                <!--js   لنفس السطر وبتبعثها للفانكشن الموجوده في id قيمه  this id بتجيب -->
+                <button onclick="getSearchMood(this.id)" id="searchTitle">search by title</button>
+                <button onclick="getSearchMood(this.id)" id="searchTCategory">search by Category</button>
+            </div>
+           
+
+        </div>
+        <!-- js هون راح يضيف الزر يلي راح يحذف كل شي عن طريق -->
+        <div id="deleteAll"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th> 
+                <th>total</th> 
+                <th>category</th> 
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <!--jsاي  شي راح ينضاف من -->
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+    </div>
+    
+    
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
